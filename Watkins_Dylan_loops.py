@@ -18,10 +18,12 @@ for x in range(1, 11):
     print(f"{k} * {x} = {y}")
 #Task 5: Read N numbers with validation
 while True:
+  #establish how many numbers will be entered and confirm it's a positive number
     x = int(input('How many numbers would you like to enter: '))
     if x <= 0:
         print('Please enter a positive number')
         break
+      #set a 'blank' starting spot for the variables that will be used later 
     total = 0
     numbers = []
     y = 0
@@ -31,14 +33,17 @@ while True:
             numbers.append(z)
             total += z
             break
-#Task 6: Min/Max until “done”
+          #Now that everything is defined given user inputs, this will outline the math we need done to find the average
     average = total / x
     print(f"sum: {total}")
     print(f"average: {average}")
-    Break
+    break
+#Task 6: Min/Max until “done”  
+#First, set a blank value that will be added to later
 x = []
 while True:
     userinput = input("Please enter a number or type 'done': ")
+  #input needs to be a string so the sytem can accept done as a valid input. Once we establish it's not 'done', we can switch from an string to a interger
     if userinput == 'done':
         break
     else:
