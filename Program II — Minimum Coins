@@ -1,14 +1,27 @@
+print('Program II — Minimum Coins (Greedy Change-Maker)')
+print()
+
 change = 0
 quarters = 0
 dimes = 0
 nickels = 0
-pennies = 0
 while True:
     user_input = (input("Please Enter Amount of Change (1-99) or ZERO to EXIT: "))
     print()
-    if user_input.lower == 'zero':
+    if user_input.lower() == 'zero':
+        print('Goodbye')
         break
     else:
         change = int(user_input)
-
-    print(f'Quarters: {quarters} Dimes: {dimes} Nickles: {nickels} Pennies: {change}')
+        while change >= 25:
+            change -= 25
+            quarters += 1
+        while change >= 10:
+            change -= 10
+            dimes += 1
+        while change >= 5:
+            change -= 5
+            nickels += 1;
+            change = change
+        print(f'Quarters= {quarters}  Dimes= {dimes}  Nickles= {nickels}  Pennies= {change}')
+        print()
