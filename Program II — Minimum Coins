@@ -1,1 +1,14 @@
+change = 0
+quarters = 0
+dimes = 0
+nickels = 0
+pennies = 0
+while True:
+    user_input = (input("Please Enter Amount of Change (1-99) or ZERO to EXIT: "))
+    print()
+    if user_input.lower == 'zero':
+        break
+    else:
+        change = int(user_input)
 
+    print(f'Quarters: {quarters} Dimes: {dimes} Nickles: {nickels} Pennies: {change}')
