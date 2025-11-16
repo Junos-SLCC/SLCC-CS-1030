@@ -1,27 +1,51 @@
 print('Program II — Minimum Coins (Greedy Change-Maker)')
 print()
-
-change = 0
-quarters = 0
-dimes = 0
-nickels = 0
 while True:
-    user_input = (input("Please Enter Amount of Change (1-99) or ZERO to EXIT: "))
+    user_input = (input("Please Enter Amount of Change (without decimals) or ZERO to EXIT: "))
     print()
+    change = 0
+    hundred = 0
+    fifty = 0
+    twenty = 0
+    ten = 0
+    five = 0
+    dollar_bill = 0
+    quarters = 0
+    dimes = 0
+    nickels = 0
+    pennies = 0
     if user_input.lower() == 'zero':
         print('Goodbye')
         break
     else:
         change = int(user_input)
+        while change >= 10000:
+            change -= 10000 #change=change-1
+            hundred += 1;
+        while change >= 5000:
+            change -= 5000 #change=change-1
+            fifty += 1;
+        while change >= 2000:
+            change -= 2000 #change=change-1
+            twenty += 1;
+        while change >= 1000:
+            change -= 1000 #change=change-1
+            ten += 1;
+        while change >= 500:
+            change -= 500 #change=change-1
+            five += 1;    
+        while change >= 100:
+            change -= 100 #change=change-1
+            dollar_bill += 1;
         while change >= 25:
-            change -= 25
-            quarters += 1
+            change -= 25 #change=change-25
+            quarters += 1;
         while change >= 10:
-            change -= 10
-            dimes += 1
+            change -= 10 #change=change-10
+            dimes += 1;
         while change >= 5:
-            change -= 5
+            change -= 5 #change=change-5
             nickels += 1;
             change = change
-        print(f'Quarters= {quarters}  Dimes= {dimes}  Nickles= {nickels}  Pennies= {change}')
+        print(f'*Bills* $100= {hundred} $50= {fifty} $20= {twenty} $10= {ten} $5= {five} $1= {dollar_bill} *Coins* Quarters= {quarters}  Dimes= {dimes}  Nickles= {nickels}  Pennies= {change}')
         print()
