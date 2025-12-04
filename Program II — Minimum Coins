@@ -20,23 +20,23 @@ while True:
     else:
         change = int(user_input)
         while change >= 10000:
-            change -= 10000 #change=change-1
+            change -= 10000 #change=change-10000
             hundred += 1;
         while change >= 5000:
-            change -= 5000 #change=change-1
+            change -= 5000 #change=change-5000
             fifty += 1;
         while change >= 2000:
-            change -= 2000 #change=change-1
+            change -= 2000 #change=change-2000
             twenty += 1;
         while change >= 1000:
-            change -= 1000 #change=change-1
+            change -= 1000 #change=change-1000
             ten += 1;
         while change >= 500:
-            change -= 500 #change=change-1
+            change -= 500 #change=change-500
             five += 1;    
         while change >= 100:
-            change -= 100 #change=change-1
-            dollar_bill += 1;
+            change -= 100 #change=change-100
+            dollar_bill += 1; 
         while change >= 25:
             change -= 25 #change=change-25
             quarters += 1;
@@ -47,5 +47,6 @@ while True:
             change -= 5 #change=change-5
             nickels += 1;
             change = change
-        print(f'*Bills* $100= {hundred} $50= {fifty} $20= {twenty} $10= {ten} $5= {five} $1= {dollar_bill} *Coins* Quarters= {quarters}  Dimes= {dimes}  Nickles= {nickels}  Pennies= {change}')
+        print(f'*Bills* $100: {hundred} $50: {fifty} $20: {twenty} $10: {ten} $5: {five} $1: {dollar_bill}')
+        print(f'*Coins* Quarters: {quarters}  Dimes: {dimes}  Nickles: {nickels}  Pennies: {change}')
         print()
